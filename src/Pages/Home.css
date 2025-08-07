@@ -1,0 +1,34 @@
+.HeroAbout {
+  height: 500px;                /* Fixed height */
+  max-height: 500px;            /* Prevent overflow */
+  overflow-y: auto;             /* Enable vertical scroll */
+  padding: 2rem 1rem 2rem 1rem; /* Padding for content */
+  background: black;          /* Subtle dark background */
+  border-radius: 1.5rem;        /* Rounded corners */
+  box-shadow: 0 2px 16px rgba(0,0,0,0.15); /* Soft shadow */
+  scrollbar-width: none;        /* Hide scrollbar (Firefox) */
+  -ms-overflow-style: none;     /* Hide scrollbar (IE/Edge) */
+  transition: box-shadow 0.3s, background 0.3s; /* Smooth effect */
+  scroll-behavior: smooth;      /* Smooth scrolling */
+}
+
+/* Hide scrollbar for Chrome, Safari, Opera */
+.HeroAbout::-webkit-scrollbar {
+  display: none;
+}
+
+/* Optional: Scroll effect on hover */
+.HeroAbout:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  background: black;
+}
+
+/* Optional: Fade-in animation on mount */
+@keyframes fadeInHeroAbout {
+  from { opacity: 0; transform: translateY(30px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+
+.HeroAbout {
+  animation: fadeInHeroAbout 0.5s ease-in-out;
+}
